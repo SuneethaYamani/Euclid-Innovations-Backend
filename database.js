@@ -19,13 +19,13 @@ const db = new sqlite3.Database(DBSOURCE, (err) => {
       if (err) {
         // Table already created
         console.log('table already created')
-      } else {
+      } 
         // Table just created, creating some rows
         var insert = 'INSERT INTO sensor_data (sensor_id,sensor_reading,timestamp) VALUES (?,?,?)'
-        db.run(insert, ['temp123', 23, '1/1/2020'])
-        db.run(insert, ['temp124', 20, '1/2/2020'])
-        db.run(insert, ['temp125', 27, '1/3/2020'])
-      }
+        db.run(insert, ['temp2', 13, '3/1/2020'])
+        db.run(insert, ['temp1', 20, '3/2/2020'])
+        db.run(insert, ['temp0', 37, '3/3/2020'])
+     
     })
   }
 })
